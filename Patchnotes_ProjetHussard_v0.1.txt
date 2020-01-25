@@ -1,0 +1,18 @@
+Tuto: https://www.youtube.com/watch?time_continue=26&v=qpXxcvS-g3g&feature=emb_logo
+
+
+Les scènes suivantes ont été renommées:
+- "Musée" -> "Musee"
+- "Niveau 1 Hussard" -> "Niveau 1"
+- "Niveau 2 Hussard" -> "Niveau 2"
+- "Niveau 3 Hussard" -> "Niveau 3"
+
+La scène "Sample Scene" a été supprimée
+
+Les Prefabs ont été rangés dans un nouveau dossier du même nom
+
+Musee: Teleporteur (Missing Prefab)
+Niveau 2: 4 missing Prefabs et missing scripts sur certains des objets (dont Player)
+
+
+TODO: Prefab du player utilisé dans les 3 niveaux
