@@ -6,6 +6,7 @@ Projet Hussard/Projet Hussard.sln
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+/Library/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
