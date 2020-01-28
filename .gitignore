@@ -1,7 +1,4 @@
 !.gitignore
+Assembly-CSharp-Editor.csproj
 Projet Hussard/Library/
-Library/
-\Library
-library/
-library
 Projet Hussard/Temp/
