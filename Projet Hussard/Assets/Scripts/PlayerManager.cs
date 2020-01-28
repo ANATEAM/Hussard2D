@@ -47,7 +47,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Invicible");
+            Debug.Log("Invincible");
         }
     }
 
@@ -95,7 +95,7 @@ public class PlayerManager : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Water"))
+        /*if (collision.CompareTag("Water"))
         {
 
             isInWater = true;
@@ -104,21 +104,22 @@ public class PlayerManager : MonoBehaviour
             moveSpeed = 0.1f;
             if (Input.GetKeyDown(KeyCode.Z))
             {
-                playerRb.AddForce(Vector2.up * moveSpeed);
+                playerRb.GetComponent<Rigidbody2D>().velocity = new Vector3(0, speed, 0);
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
-                playerRb.AddForce(Vector2.up * -moveSpeed);
+                playerRb.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -speed, 0);
             }
-        }
+            playerRb.transform.Translate(Vector3.right * speed);
+        }*/
     }   
 
     void OnTriggerExit2D()
-    {
+    {/*
         isInWater = false;
         moveSpeed = 0.2f;
         GetComponent<Rigidbody2D>().gravityScale = 5F;
-        playerRb.transform.Translate(Vector2.right * moveSpeed);
+        playerRb.transform.Translate(Vector2.right * moveSpeed);*/
     }
     
     public void jump()

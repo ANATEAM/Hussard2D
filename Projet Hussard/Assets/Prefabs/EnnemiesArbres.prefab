@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 1704617792320071191}
   - component: {fileID: 6414320163588154201}
   - component: {fileID: 6217667724416214560}
+  - component: {fileID: 4842588097251904001}
   m_Layer: 8
   m_Name: EnnemiesArbres
   m_TagString: Untagged
@@ -65,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 6245415814200574474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -67.55468, y: 24.458584, z: 966.9231}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.75, z: 1}
   m_Children:
   - {fileID: 2521938808118412843}
   m_Father: {fileID: 0}
@@ -130,7 +131,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -285,3 +286,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+--- !u!70 &4842588097251904001
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6245415814200574474}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 0.99999994}
+  m_Direction: 0
