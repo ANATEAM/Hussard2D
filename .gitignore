@@ -1,5 +1,7 @@
 !.gitignore
 Projet Hussard/Library/
+/Library/
 Projet Hussard/Temp/
+Projet Hussard/.vs/
 Projet Hussard/Assembly-CSharp.csproj
 Projet Hussard/Assembly-Editor.csproj
