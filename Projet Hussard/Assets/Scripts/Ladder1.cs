@@ -11,7 +11,7 @@ public class Ladder1 : MonoBehaviour
     //Entre dans le trigger de l'échelle
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "Player")
         {
             playerManager.isOnLadder = true;
             playerRb.gravityScale = 0f;
