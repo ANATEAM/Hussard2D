@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 7097937535346468675}
   - component: {fileID: 9115037147192446964}
   - component: {fileID: 177597639}
+  - component: {fileID: 6086208486702193854}
   m_Layer: 8
   m_Name: EnnemiesSol
   m_TagString: Untagged
@@ -289,7 +290,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -384,3 +385,19 @@ MonoBehaviour:
   retreatDistance: 9
   aggro: 0
   player: {fileID: 2086401723009728074, guid: 0b2c40415d797234186d5296600ee231, type: 3}
+--- !u!70 &6086208486702193854
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9111910001586005844}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 0.99999994}
+  m_Direction: 0

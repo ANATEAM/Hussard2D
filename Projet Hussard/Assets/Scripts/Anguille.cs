@@ -19,7 +19,7 @@ public class Anguille : MonoBehaviour
         }
         if (target2 != null)
         {
-        Debug.DrawLine(this.transform.position, target1.transform.position, Color.yellow);
+        Debug.DrawLine(this.transform.position, target2.transform.position, Color.yellow);
          }
 
     }
