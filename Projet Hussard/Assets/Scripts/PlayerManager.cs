@@ -16,10 +16,10 @@ public class PlayerManager : MonoBehaviour
     public float maxHealth = 150f;
     public float currentHealth;
     public float speed;
-
+    //Invincibilité
     private bool canTakeDamages = true;
     private bool animIsRunning = false;
-
+    //Movement changes
     public bool isOnTheGround;
     public bool isInWater;
     public bool isOnLadder;
