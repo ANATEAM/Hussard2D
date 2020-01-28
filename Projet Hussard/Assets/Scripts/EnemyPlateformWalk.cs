@@ -39,12 +39,12 @@ public class EnemyPlateformWalk : MonoBehaviour
         
 
         //Check to see if there's ground in front of us before moving forward
-        //Debug.DrawLine(lineCastPos, lineCastPos + -Vector2.up);
+        Debug.DrawLine(lineCastPos, lineCastPos + -Vector2.up);
         bool isGrounded = Physics2D.Linecast(lineCastPos, lineCastPos + -Vector2.up, enemyMask);
 
         //Check to see if there's a wall in front of us before moving forward
-        //Debug.DrawLine(lineCastPos, lineCastPos - myTrans.right.toVector2() * 0.5f);
-        bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - myTrans.right.toVector2() * 0.5f, enemyMask);
+        Debug.DrawLine(lineCastPos, lineCastPos - myTrans.right.toVector2() * 0.1f);
+        bool isBlocked = Physics2D.Linecast(lineCastPos, lineCastPos - myTrans.right.toVector2() * 0.1f, enemyMask);
         
         
         //If theres no ground, turn around. Or if I hit a wall, turn around
