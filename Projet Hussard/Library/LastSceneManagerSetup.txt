@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Niveau 3.unity
-=======
-- path: Assets/Scenes/Musee.unity
->>>>>>> 595616a658206db47093116ac45f6bc897ee365b
+- path: Assets/Scenes/Niveau 2.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
