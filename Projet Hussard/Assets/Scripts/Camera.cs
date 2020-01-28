@@ -24,16 +24,16 @@ public class Camera : MonoBehaviour
 
         if (target.position.x < minXLimit.position.x)
         {
-            transform.position = new Vector3(minXLimit.position.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(minXLimit.position.x, target.position.y, transform.position.z);
         }
 
         else if (target.position.x > maxXLimit.position.x)
         {
-            transform.position = new Vector3(maxXLimit.position.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(maxXLimit.position.x, target.position.y, transform.position.z);
         }
         else
         {
-            transform.position = new Vector3(target.position.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
         }
     }
     
