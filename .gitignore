@@ -1,5 +1,4 @@
-/*
-/*/
-!.gitignore
-!/Assets/
-!/ProjectSettings/
+Projet Hussard/Library/
+Projet Hussard/Temp/
+
+*.meta
