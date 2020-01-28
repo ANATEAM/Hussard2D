@@ -1,5 +1,5 @@
 !.gitignore
 Assembly-CSharp-Editor.csproj
+Assembly-Editor.csproj
 Projet Hussard/Library/
 Projet Hussard/Temp/
-Projet Hussard/.vs/Assembly-CSharp/v16/.suo
