@@ -86,6 +86,7 @@
      <Compile Include="Assets\Scripts\AnimationBombardement.cs" />
      <Compile Include="Assets\Scripts\AutoScroll.cs" />
      <Compile Include="Assets\Scripts\BarilExplosif.cs" />
+     <Compile Include="Assets\Scripts\BreakableBlock.cs" />
      <Compile Include="Assets\Scripts\BulletMob.cs" />
      <Compile Include="Assets\Scripts\BulletScript.cs" />
      <Compile Include="Assets\Scripts\Camera.cs" />
