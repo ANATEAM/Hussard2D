@@ -17,10 +17,9 @@ public class InputManager : MonoBehaviour
             {
                 playerManager.move(new Vector2(Input.GetAxisRaw("Horizontal"), 0));
             }
-
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetAxisRaw("Vertical") != 0)
             {
-                playerManager.jump();
+                playerManager.jump(Input.GetAxisRaw("Vertical"));
             }
 
             /*if (Input.GetKey(KeyCode.S))
