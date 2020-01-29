@@ -6,7 +6,7 @@ public class InputManager : MonoBehaviour
 {
 
     [SerializeField] private PlayerManager playerManager;
-    [SerializeField] private float moveDirectionSpeed;
+    [SerializeField] private cantMove CantMoveScript;
     public bool cantMove = false;
     // Update is called once per frame
     void Update()
@@ -31,7 +31,7 @@ public class InputManager : MonoBehaviour
         else if (cantMove == true)
         {
             //Déplacement auto pour certaines phases
-            playerManager.playerRb.transform.Translate(Vector2.right * moveDirectionSpeed);
+            playerManager.playerRb.transform.Translate(Vector2.right * CantMoveScript.moveDirectionSpeed);
         }
 
 

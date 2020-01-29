@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7321854544698611610}
   - component: {fileID: 8343938081512849970}
   - component: {fileID: 2767645550803816038}
+  - component: {fileID: -6929526609744004375}
   m_Layer: 0
   m_Name: BarilExplosif
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8505970430106146676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.34, y: -5.849, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.817, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -123,4 +124,16 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 3
+--- !u!114 &-6929526609744004375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8505970430106146676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60880561155193248b6bb862d00a670b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
