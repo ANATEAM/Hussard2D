@@ -17,8 +17,6 @@ public class BarilExplosif : MonoBehaviour
 
     private void Explosion()
     {
-        //TODO : Il faut un explosionDir et un explosionForce pour l'explosion
-
         float explosionForce = 20f;
         float explosionRadius = 20f;
 
@@ -45,12 +43,5 @@ public class BarilExplosif : MonoBehaviour
 
             }
         }
-        
-        /*
-        var dir = (transform.position - explosionPosition);
-        float wearoff = 1 - (dir.magnitude / explosionRadius);
-        Vector3 baseForce = dir.normalized * explosionForce * wearoff;
-        body.AddForce(baseForce);
-        */
     }
 }
