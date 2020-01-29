@@ -78,6 +78,15 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public void LaunchHeldObstacle()
+    {
+        if (heldObstacle != null)
+        {
+            heldObstacle.GetComponent<DynamicObstacles>().LaunchObject();
+            heldObstacle = null;
+        }
+    }
+
     void OnTriggerStay2D(Collider2D collision)
     {
         /*if (collision.CompareTag("Water"))
@@ -120,14 +129,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void LaunchHeldObstacle()
-    {
-        if (heldObstacle != null)
-        {
-            heldObstacle.GetComponent<DynamicObstacles>().LaunchObject();
-            heldObstacle = null;
-        }
-    }
+
 
     IEnumerator invulnerableAction()
     {
