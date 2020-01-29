@@ -84,6 +84,7 @@
      <Compile Include="Assets\2D_Destruction\Unity-delaunay\utils\IDisposable.cs" />
      <Compile Include="Assets\Scripts\Anguille.cs" />
      <Compile Include="Assets\Scripts\AnimationBombardement.cs" />
+     <Compile Include="Assets\Scripts\AutoScroll.cs" />
      <Compile Include="Assets\Scripts\BarilExplosif.cs" />
      <Compile Include="Assets\Scripts\BulletMob.cs" />
      <Compile Include="Assets\Scripts\BulletScript.cs" />
