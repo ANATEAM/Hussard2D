@@ -124,8 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletCollision:
     serializedVersion: 2
-    m_Bits: 4294967295
-  speed: 20
+    m_Bits: 2871
+  speed: 40
   damage: 5
   rb: {fileID: 5060467323934724340}
 --- !u!50 &5060467323934724340

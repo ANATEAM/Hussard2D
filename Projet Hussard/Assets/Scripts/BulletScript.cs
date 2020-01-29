@@ -48,6 +48,11 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        else if ( hitInfo.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
     }
     
 

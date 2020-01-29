@@ -3,11 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+public enum Explosif
+{
+   Baril, Mine
+}
+
 public class BarilExplosif : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    [SerializeField] private Explosif typeExplosif = Explosif.Baril;
+
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.gameObject.name == "Player")
+        if (typeExplosif == Explosif.Mine)
+        {
+            if (col.gameObject.tag == "Player")
+            {
+                Debug.Log("Autodestruct");
+                Explosion();
+                GameObject.Destroy(this.gameObject);
+            }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Bullet")
         {
             Debug.Log("Autodestruct");
             Explosion();
