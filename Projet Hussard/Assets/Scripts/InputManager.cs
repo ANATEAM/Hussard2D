@@ -6,7 +6,8 @@ public class InputManager : MonoBehaviour
 {
 
     [SerializeField] private PlayerManager playerManager;
-    [SerializeField] private float moveDirectionSpeed;
+    [SerializeField] private cantMove CantMoveScript;
+    [SerializeField] private DynamicObstacles dynamicObstaclesScript;
     public bool cantMove = false;
     // Update is called once per frame
     void Update()
@@ -17,12 +18,16 @@ public class InputManager : MonoBehaviour
             {
                 playerManager.move(new Vector2(Input.GetAxisRaw("Horizontal"), 0));
             }
-
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetAxisRaw("Vertical") != 0)
             {
-                playerManager.jump();
+                playerManager.jump(Input.GetAxisRaw("Vertical"));
             }
 
+            if (Input.GetMouseButtonDown(1))
+            {
+                dynamicObstaclesScript.LaunchObject();
+            }
+            
             /*if (Input.GetKey(KeyCode.S))
             {
                 playerManager.crouch();
@@ -31,7 +36,7 @@ public class InputManager : MonoBehaviour
         else if (cantMove == true)
         {
             //Déplacement auto pour certaines phases
-            playerManager.playerRb.transform.Translate(Vector2.right * moveDirectionSpeed);
+            playerManager.playerRb.transform.Translate(Vector2.right * CantMoveScript.moveDirectionSpeed);
         }
 
 
