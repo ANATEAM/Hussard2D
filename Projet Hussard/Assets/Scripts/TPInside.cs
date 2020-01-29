@@ -1,40 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class LevelTransition : MonoBehaviour
+public class TPInside : MonoBehaviour
 {
-    public Animator transition;
+    public Animator transitionI;
     public float transitionTime = 1f;
-    [SerializeField] private int levelToLoad;
+    [SerializeField] private GameObject objectToTP;
+    [SerializeField] private Transform placeTP;
     public bool needInput;
-
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && needInput == false)
+        if (collision.CompareTag("Player") && needInput == false)
         {
-            StartCoroutine (LoadLevel(levelToLoad));
+            StartCoroutine(InsideTP());
         }
         else if (collision.CompareTag("Player") && needInput == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                StartCoroutine(LoadLevel(levelToLoad));
+                StartCoroutine(InsideTP());
             }
         }
     }
-
-    IEnumerator LoadLevel(int LevelIndex)
+    IEnumerator InsideTP()
     {
         //Play animation
-        transition.SetTrigger("Start");
+        transitionI.SetTrigger("StartI");
 
         //Wait
         yield return new WaitForSeconds(transitionTime);
 
-        //Load scene
-        SceneManager.LoadScene(levelToLoad);
+        //TP Player
+        objectToTP.transform.position = placeTP.position;
+
+
     }
 }

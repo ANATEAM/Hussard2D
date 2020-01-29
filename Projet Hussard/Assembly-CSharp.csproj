@@ -115,6 +115,7 @@
      <Compile Include="Assets\Scripts\ScoreScript.cs" />
      <Compile Include="Assets\Scripts\ScreenShake.cs" />
      <Compile Include="Assets\Scripts\TemporaryPlatform.cs" />
+     <Compile Include="Assets\Scripts\TPInside.cs" />
      <Compile Include="Assets\Scripts\UnCheckIsKinematicOnTriggerEnter.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/zemal/Documents/GitHub/Hussard2D/Projet Hussard/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
