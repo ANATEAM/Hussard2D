@@ -7,7 +7,6 @@ public class InputManager : MonoBehaviour
 
     [SerializeField] private PlayerManager playerManager;
     [SerializeField] private cantMove CantMoveScript;
-    [SerializeField] private DynamicObstacles dynamicObstaclesScript;
     public bool cantMove = false;
     // Update is called once per frame
     void Update()
@@ -18,16 +17,12 @@ public class InputManager : MonoBehaviour
             {
                 playerManager.move(new Vector2(Input.GetAxisRaw("Horizontal"), 0));
             }
-            if (Input.GetAxisRaw("Vertical") != 0)
+
+            if (Input.GetKeyDown(KeyCode.Z))
             {
-                playerManager.jump(Input.GetAxisRaw("Vertical"));
+                playerManager.jump();
             }
 
-            if (Input.GetMouseButtonDown(1))
-            {
-                dynamicObstaclesScript.LaunchObject();
-            }
-            
             /*if (Input.GetKey(KeyCode.S))
             {
                 playerManager.crouch();

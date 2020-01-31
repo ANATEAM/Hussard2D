@@ -61,9 +61,24 @@ public class PlayerManager : MonoBehaviour
         {
             this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, 180f, this.transform.eulerAngles.z);
         }
-
         playerRb.transform.Translate(Vector3.right * moveSpeed);
 
+        if (isOnLadder)
+        {
+            isOnLadder = true;
+            if (moveDirection.y > 0)
+            {
+                playerRb.GetComponent<Rigidbody2D>().velocity = new Vector3(0, speed, 0);
+            }
+            else if (moveDirection.y < 0)
+            {
+                playerRb.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -speed, 0);
+            }
+            else
+            {
+                playerRb.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+            }
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -75,15 +90,6 @@ public class PlayerManager : MonoBehaviour
                 heldObstacle = collision.gameObject;
                 heldObstacle.GetComponent<DynamicObstacles>().PickUp();
             }
-        }
-    }
-
-    public void LaunchHeldObstacle()
-    {
-        if (heldObstacle != null)
-        {
-            heldObstacle.GetComponent<DynamicObstacles>().LaunchObject();
-            heldObstacle = null;
         }
     }
 
@@ -116,20 +122,23 @@ public class PlayerManager : MonoBehaviour
         playerRb.transform.Translate(Vector2.right * moveSpeed);*/
     }
     
-    public void jump(float yMoveValue)
+    public void jump()
     {
-        if (isOnLadder)
-        {
-            playerRb.transform.Translate(Vector3.up * yMoveValue * moveSpeed);
-        }
-        else if (isOnTheGround && yMoveValue > 0)
+        if (isOnTheGround)
         {
             playerRb.AddForce(Vector2.up * jumpForce);
             isOnTheGround = false;
         }
     }
 
-
+    public void LaunchHeldObstacle()
+    {
+        if (heldObstacle != null)
+        {
+            heldObstacle.GetComponent<DynamicObstacles>().LaunchObject();
+            heldObstacle = null;
+        }
+    }
 
     IEnumerator invulnerableAction()
     {

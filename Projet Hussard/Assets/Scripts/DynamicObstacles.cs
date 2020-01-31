@@ -27,6 +27,6 @@ public class DynamicObstacles : MonoBehaviour
         this.gameObject.transform.SetParent(null);
         GetComponent<BoxCollider2D>().enabled = true;
         rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.AddForce(player.transform.right * 800);
+        rb.AddForce(player.transform.right* 800);
     }
 }

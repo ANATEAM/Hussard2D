@@ -8,7 +8,6 @@ TagManager:
   - Bullet
   - "D\xE9cors"
   - Water
-  - Ground
   layers:
   - Default
   - TransparentFX
