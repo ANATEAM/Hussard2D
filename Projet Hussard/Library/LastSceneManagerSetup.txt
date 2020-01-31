@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Musee.unity
+- path: Assets/Scenes/Cinematique Debut Jeu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
